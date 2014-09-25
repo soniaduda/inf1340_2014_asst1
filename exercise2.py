@@ -36,10 +36,12 @@ def checksum (upc):
     if len(upc) != 12:
         raise ValueError("Incorrect length")
 
-    # convert string to array
-    # hint: use the list function
+    digits = list(upc)
 
+    odd_result = digits[0 + 2 + 4]
+    print(digits)
     # generate checksum using the first 11 digits provided
+
     # check against the the twelfth digit
 
     # return True if they are equal, False otherwise
