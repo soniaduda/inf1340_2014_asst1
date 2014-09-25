@@ -45,20 +45,10 @@ def grade_to_gpa(grade):
     gpa = 0.0
 
     if type(grade) is str:
-        if letter_grade == "A+" or letter_grade == "A":
-            gpa = 4.0
-        elif letter_grade == "A-":
-            gpa = 3.7
-        elif letter_grade =="B+":
-            gpa = 3.3
-        elif letter_grade == "B":
-            gpa = 3.0
-        elif letter_grade == "B-":
-            gpa = 2.7
-        elif letter_grade == "FZ":
-            gpa = 0.9
+        if grade == "A+" or grade == "A" or grade == "A-" or grade == "B+" or grade == "B" or grade == "B-" or grade == "FZ":
+            letter_grade = grade
         else:
-            print ("Not a valid input")
+            raise ValueError("Invalid input")
     elif type(grade) is int:
         print("mark") # remove this line once the code is implemented
         # check that grade is in the accepted range
@@ -71,8 +61,18 @@ def grade_to_gpa(grade):
 
     # write a long if-statement to convert letter_grade
     # assign the value to gpa
-    if letter_grade == "A":
+    if letter_grade == "A+" or letter_grade == "A":
         gpa = 4.0
+    elif letter_grade == "A-":
+        gpa = 3.7
+    elif letter_grade =="B+":
+        gpa = 3.3
+    elif letter_grade == "B":
+        gpa = 3.0
+    elif letter_grade == "B-":
+        gpa = 2.7
+    elif letter_grade == "FZ":
+        gpa = 0.9
 
     return gpa
 
