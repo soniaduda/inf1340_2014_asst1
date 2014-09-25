@@ -74,7 +74,7 @@ def grade_to_gpa(grade):
             raise ValueError("Invalid input")
     elif type(grade) is int:
         # check that grade is in the accepted range
-        if grade >= 0 or grade<= 100:
+        if grade >= 0 and grade <= 100:
             letter_grade = mark_to_letter(grade)
         else:
             raise ValueError("Invalid input")
