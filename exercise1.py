@@ -22,6 +22,31 @@ __status__ = "Prototype"
 
 # imports one per line
 
+def mark_to_letter(mark):
+    """
+    Convert numeric grade to a letter grade.
+    :param mark: (integer): Numeric grade to be converted
+    :return: str: The equivalent letter grade
+    """
+
+    letter = ""
+    if mark >=90 and mark <=100:
+        letter = "A+"
+    elif mark >=85 and mark <=89:
+        letter = "A"
+    elif mark >=80 and mark <=84:
+        letter = "A-"
+    elif mark >=77 and mark <=79:
+        letter = "B+"
+    elif mark >=73 and mark <=76:
+        letter = "B"
+    elif mark >=70 and mark <=72:
+        letter = "B-"
+    else:
+        letter = "FZ"
+
+    return letter
+
 
 def grade_to_gpa(grade):
     """
