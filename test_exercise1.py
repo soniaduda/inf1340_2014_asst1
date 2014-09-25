@@ -19,17 +19,23 @@ def test_letter_grade():
     """
     Letter grade inputs
     """
+
     assert grade_to_gpa("A+") == 4.0
     assert grade_to_gpa("A") == 4.0
-    assert grade_to_gpa("A-") == 4.0
-    assert grade_to_gpa("B+") == 4.0
-    assert grade_to_gpa("B") == 4.0
-    assert grade_to_gpa("B-") == 4.0
-    assert grade_to_gpa("FZ") == 4.0
+    assert grade_to_gpa("A-") == 3.7
+    assert grade_to_gpa("B+") == 3.3
+    assert grade_to_gpa("B") == 3.0
+    assert grade_to_gpa("B-") == 2.7
+    assert grade_to_gpa("FZ") == 0.0
     
     with pytest.raises(ValueError):
         grade_to_gpa("q")
-    # add more tests for invalid values
+    with pytest.raises(ValueError):
+        grade_to_gpa("a+")
+    with pytest.raises(ValueError):
+        grade_to_gpa("A Plus")
+    with pytest.raises(ValueError):
+        grade_to_gpa("Perfect!")
 
 
 def test_percentage_grade():
