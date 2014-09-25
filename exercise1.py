@@ -75,7 +75,6 @@ def grade_to_gpa(grade):
         else:
             raise ValueError("Invalid input")
     elif type(grade) is int:
-        print("mark") # remove this line once the code is implemented
         # check that grade is in the accepted range
         if grade >= 0 or grade<= 100:
             letter_grade = mark_to_letter(grade)
@@ -83,8 +82,6 @@ def grade_to_gpa(grade):
             raise ValueError("Invalid input")
         # convert the numeric grade to a letter grade
 
-        # assign the value to letter_grade
-        # hint: letter_grade = mark_to_letter(grade)
     else:
         # raise a TypeError exception
         raise TypeError("Invalid type passed as parameter")
