@@ -38,13 +38,24 @@ def checksum (upc):
 
     digits = list(upc)
 
-    odd_result = digits[0 + 2 + 4]
-    print(digits)
+    odd_result = (digits[0] + digits[2] + digits[4] + digits[6] + digits[8] + digits[10])*3
+    result = odd_result + digits[1] + digits[3] + digits[5] + digits[7] + digits[9]
+    int(result)
     # generate checksum using the first 11 digits provided
+    check_digit = " "
+
+    if(result%10 != 0):
+        check_digit = 10 - result%10
+    else:
+        check_digit = 0
+
+    if check_digit == digits[11]:
+        return True
+    else:
+        return False
 
     # check against the the twelfth digit
 
     # return True if they are equal, False otherwise
 
-    return False
 
