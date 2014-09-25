@@ -10,9 +10,7 @@ Example:
     $ python exercise1.py
 
 """
-##TESTING TESTING TESTING TESTING
 
-### TESTING
 __authors__ = 'Sonia Duda and Lauren Olar'
 __email__ = "sonia.duda@mail.utoronto.ca & lauren.olar@mail.utoronto.ca"
 
