@@ -97,7 +97,7 @@ def grade_to_gpa(grade):
     elif letter_grade == "B-":
         gpa = 2.7
     elif letter_grade == "FZ":
-        gpa = 0.9
+        gpa = 0.0
 
     return gpa
 
