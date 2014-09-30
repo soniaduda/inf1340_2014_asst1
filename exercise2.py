@@ -53,7 +53,6 @@ def checksum (upc):
     else:
         return False
 
-print(checksum("786936224306"))
     # check against the the twelfth digit
 
     # return True if they are equal, False otherwise
