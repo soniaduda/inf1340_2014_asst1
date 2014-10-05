@@ -56,6 +56,4 @@ def checksum (upc):
     else:
         return False
 
-print(checksum("786936224306"))
-
 
