@@ -2,11 +2,11 @@
 
 """ Assignment 1, Exercise 1, INF1340, Fall, 2014.
 
-Grade to gpa conversion
+UPC Checksum
 
-This module contains one function checksum. It can be passed a parameter
-that is an integer (0-100) or a letter grade (A+, A, A-, B+, B, B-, or FZ). All
-other inputs will result in an error.
+This module contains one function checksum. It can be passed a 12-digit
+length integer. All other inputs will result in an error. Will return
+a True when consistent and False if otherwise.
 
 """
 

@@ -22,32 +22,6 @@ __status__ = "Prototype"
 
 # imports one per line
 
-def mark_to_letter(mark):
-    """
-    Convert numeric grade to a letter grade.
-    :param mark: (integer): Numeric grade to be converted
-    :return: str: The equivalent letter grade
-    """
-
-    letter = ""
-    if mark >=90 and mark <=100:
-        letter = "A+"
-    elif mark >=85 and mark <=89:
-        letter = "A"
-    elif mark >=80 and mark <=84:
-        letter = "A-"
-    elif mark >=77 and mark <=79:
-        letter = "B+"
-    elif mark >=73 and mark <=76:
-        letter = "B"
-    elif mark >=70 and mark <=72:
-        letter = "B-"
-    else:
-        letter = "FZ"
-
-    return letter
-
-
 def grade_to_gpa(grade):
     """
     Returns the UofT Graduate GPA for a given grade.
@@ -63,7 +37,6 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-    letter_grade = ""
     gpa = 0.0
 
     if type(grade) is str:
@@ -72,13 +45,26 @@ def grade_to_gpa(grade):
         else:
             raise ValueError("Invalid input")
     elif type(grade) is int:
-        if grade >= 0 and grade <= 100:  # check that grade is in the accepted range
-            letter_grade = mark_to_letter(grade) # assign the value to letter_grade
+        if grade >= 0 and grade <= 100:  # check that grade is in the accepted range, then assigns the number grade to the corresponding letter grade
+             if grade >=90 and grade <=100:
+                letter_grade = "A+"
+             elif grade >=85 and grade <=89:
+                letter_grade = "A"
+             elif grade >=80 and grade <=84:
+                letter_grade= "A-"
+             elif grade >=77 and grade <=79:
+                letter_grade= "B+"
+             elif grade >=73 and grade <=76:
+                letter_grade = "B"
+             elif grade >=70 and grade <=72:
+                letter_grade = "B-"
+             else:
+                 letter_grade = "FZ"
         else:
             raise ValueError("Invalid input")
-
     else:
         raise TypeError("Invalid type passed as parameter")  # raise a TypeError exception
+
 
     # write a long if-statement to convert letter_grade
     # assign the value to gpa
