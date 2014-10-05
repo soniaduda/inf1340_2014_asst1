@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-""" Assignment 1, Exercise 1, INF1340, Fall, 2014. Grade to gpa conversion
+""" Assignment 1, Exercise 1, INF1340, Fall, 2014.
+
+Grade to GPA Conversion
 
 This module contains one function grade_to_gpa. It can be passed a parameter
 that is an integer (0-100) or a letter grade (A+, A, A-, B+, B, B-, or FZ). All
@@ -49,16 +51,13 @@ def mark_to_letter(mark):
 def grade_to_gpa(grade):
     """
     Returns the UofT Graduate GPA for a given grade.
-
     :param:
         grade (integer or string): Grade to be converted
             If integer, accepted values are 0-100.
             If string, accepted values are A+, A, A-, B+, B, B-, FZ
-
     :return:
         float: The equivalent GPA
             Value is 0.0-4.0
-
     :raises:
         TypeError if parameter is not a string or integer
         ValueError if parameter is out of range
@@ -69,20 +68,17 @@ def grade_to_gpa(grade):
 
     if type(grade) is str:
         if grade == "A+" or grade == "A" or grade == "A-" or grade == "B+" or grade == "B" or grade == "B-" or grade == "FZ":
-            letter_grade = grade
+            letter_grade = grade  # assign grade to letter_grade
         else:
             raise ValueError("Invalid input")
     elif type(grade) is int:
-        # check that grade is in the accepted range
-        if grade >= 0 and grade <= 100:
-            letter_grade = mark_to_letter(grade)
+        if grade >= 0 and grade <= 100:  # check that grade is in the accepted range
+            letter_grade = mark_to_letter(grade) # assign the value to letter_grade
         else:
             raise ValueError("Invalid input")
-        # convert the numeric grade to a letter grade
 
     else:
-        # raise a TypeError exception
-        raise TypeError("Invalid type passed as parameter")
+        raise TypeError("Invalid type passed as parameter")  # raise a TypeError exception
 
     # write a long if-statement to convert letter_grade
     # assign the value to gpa
@@ -100,4 +96,3 @@ def grade_to_gpa(grade):
         gpa = 0.0
 
     return gpa
-

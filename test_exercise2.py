@@ -2,15 +2,12 @@
 
 """ Module to test exercise2.py """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
+__authors__ = 'Sonia Duda & Lauren Olar'
+__email__ = "sonia.duda@mail.utoronto.ca & lauren.olar@mail.utoronto.ca"
 
-__copyright__ = "2014 Susan Sim"
-__license__ = "MIT License"
+__copyright__ = "2014 SD&LO"
 
 __status__ = "Prototype"
-
-# imports one per line
 
 # imports one per line
 import pytest

@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 
+""" Assignment 1, Exercise 1, INF1340, Fall, 2014.
+
+Grade to gpa conversion
+
+This module contains one function grade_to_gpa. It can be passed a parameter
+that is an integer (0-100) or a letter grade (A+, A, A-, B+, B, B-, or FZ). All
+other inputs will result in an error.
+
 """
-    Perform a checksum on a UPC
 
-    Assignment 1, Exercise 2, INF1340 Fall 2014
-"""
+__authors__ = 'Sonia Duda and Lauren Olar'
+__email__ = "sonia.duda@mail.utoronto.ca & lauren.olar@mail.utoronto.ca"
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
-
-__copyright__ = "2014 Susan Sim"
-__license__ = "MIT License"
+__copyright__ = "2014 SD&LO"
 
 __status__ = "Prototype"
 
 # imports one per line
-
 
 def checksum (upc):
     """
@@ -26,8 +28,8 @@ def checksum (upc):
         Boolean: True, checksum is correct
         False, otherwise
     :raises:
-        TypeError if input is not a strong
-        ValueError if string is the wrong length (with error string stating how many digits are over or under
+        TypeError if input is not a string
+        ValueError if string is the wrong length (with error string stating how many digits are over or under)
     """
 
     if type(upc) is not str:
