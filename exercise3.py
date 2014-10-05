@@ -22,7 +22,17 @@ __status__ = "Prototype"
 # imports one per line
 
 def decide_rps(player1, player2):
-    rps_outcomes = {("Rock","Rock"): 0,
+    """
+    Returns value of winning player
+    :param:
+        string: "Rock", "Paper", "Scissors"
+    :return:
+        int, value of player that wins
+    :raises:
+        TypeError if parameter is not correct string input
+    """
+
+    rps_outcomes = {("Rock", "Rock"): 0,
                     ("Rock", "Paper"): 2,
                     ("Rock", "Scissors"): 1,
                     ("Paper", "Rock"): 1,
@@ -32,10 +42,10 @@ def decide_rps(player1, player2):
                     ("Scissors", "Paper"): 1,
                     ("Scissors", "Scissors"): 0}
 
-    if player1 != "Rock" or player1!= "Paper" or player1 != "Scissors":
+    if player1 != "Rock" or player1 != "Paper" or player1 != "Scissors":
         raise TypeError("Invalid input")
 
-    if player2 != "Rock" or player1!= "Paper" or player1 != "Scissors":
+    if player2 != "Rock" or player2 != "Paper" or player2 != "Scissors":
         raise TypeError("Invalid input")
 
     return rps_outcomes.get((player1, player2))
