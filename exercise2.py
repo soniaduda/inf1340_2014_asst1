@@ -4,7 +4,7 @@
 
 Grade to gpa conversion
 
-This module contains one function grade_to_gpa. It can be passed a parameter
+This module contains one function checksum. It can be passed a parameter
 that is an integer (0-100) or a letter grade (A+, A, A-, B+, B, B-, or FZ). All
 other inputs will result in an error.
 
@@ -32,32 +32,30 @@ def checksum (upc):
         ValueError if string is the wrong length (with error string stating how many digits are over or under)
     """
 
-    if type(upc) is not str:
-        raise TypeError("Invalid input")
+    if type(upc) is not str:  # check type of input
+        raise TypeError("Invalid input")  # raise TypeError if not string
 
-    if len(upc) != 12:
-        raise ValueError("Incorrect length")
+    if len(upc) != 12:  # check length of string
+        raise ValueError("Incorrect length")  # raise ValueError if not 12
 
-    digits = list(upc)
+    digits = list(upc)  # convert string to array
 
     odd_result = (int(digits[0]) + int(digits[2]) + int(digits[4]) + int(digits[6]) + int(digits[8]) + int(digits[10]))*3
     result = odd_result + int(digits[1]) + int(digits[3]) + int(digits[5]) + int(digits[7]) + int(digits[9])
+
     # generate checksum using the first 11 digits provided
-
-
-    if(int(result)%10 != 0):
-        check_digit = 10 - int(result)%10
+    if int(result) % 10 != 0:
+        check_digit = 10 - int(result) % 10
     else:
         check_digit = 0
 
+    # check against the the twelfth digit
+    # return True if they are equal, False otherwise
     if check_digit == int(digits[11]):
         return True
     else:
         return False
 
 print(checksum("786936224306"))
-    # check against the the twelfth digit
-
-    # return True if they are equal, False otherwise
 
 
