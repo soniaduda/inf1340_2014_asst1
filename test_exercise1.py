@@ -10,6 +10,7 @@ __copyright__ = "2014 SD&LO"
 __status__ = "Prototype"
 
 # imports one per line
+
 import pytest
 from exercise1 import grade_to_gpa
 
@@ -28,13 +29,13 @@ def test_letter_grade():
     assert grade_to_gpa("FZ") == 0.0
     
     with pytest.raises(ValueError):
-        grade_to_gpa("q")
+        grade_to_gpa("Q")  # not within letter grade range
     with pytest.raises(ValueError):
-        grade_to_gpa("a+")
+        grade_to_gpa("a+")  # not correct format; capitalization
     with pytest.raises(ValueError):
-        grade_to_gpa("A Plus")
+        grade_to_gpa("A Plus")  # not correct spelling
     with pytest.raises(ValueError):
-        grade_to_gpa("Perfect!")
+        grade_to_gpa("Perfect!")  # not proper input value
 
 
 def test_percentage_grade():
@@ -70,8 +71,8 @@ def test_percentage_grade():
     assert grade_to_gpa(0) == 0.0
 
     with pytest.raises(ValueError):
-        grade_to_gpa(101)
-        grade_to_gpa(-1)
+        grade_to_gpa(101)  # over the correct range
+        grade_to_gpa(-1)  # under the correct range
 
 
 def test_float_input():
@@ -79,6 +80,4 @@ def test_float_input():
     Float inputs
     """
     with pytest.raises(TypeError):
-        grade_to_gpa(82.5)
-
-# add functions for any other tests
+        grade_to_gpa(82.5)  # does not accept floats

@@ -10,6 +10,7 @@ __copyright__ = "2014 SD&LO"
 __status__ = "Prototype"
 
 # imports one per line
+
 import pytest
 from exercise2 import checksum
 
