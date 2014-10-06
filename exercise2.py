@@ -2,11 +2,11 @@
 
 """ Assignment 1, Exercise 1, INF1340, Fall, 2014.
 
-UPC Checksum
+Grade to gpa conversion
 
-This module contains one function checksum. It can be passed a 12-digit
-length integer. All other inputs will result in an error. Will return
-a True when consistent and False if otherwise.
+This module contains one function checksum. The final digit of the UPC
+code can verify the correctness of the previous 11 digits in order to
+maintain the order of the information system.
 
 """
 
@@ -23,7 +23,8 @@ def checksum (upc):
     """
     Checks if the digits in a UPC is consistent with checksum
 
-    :param upc: a 12-digit universal product code
+    :param
+        upc: a 12-digit universal product code
     :return:
         Boolean: True, checksum is correct
         False, otherwise
