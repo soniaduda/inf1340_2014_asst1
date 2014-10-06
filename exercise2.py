@@ -19,7 +19,8 @@ __status__ = "Prototype"
 
 # imports one per line
 
-def checksum (upc):
+
+def checksum(upc):
     """
     Checks if the digits in a UPC is consistent with checksum
 
@@ -56,5 +57,3 @@ def checksum (upc):
         return True
     else:
         return False
-
-
