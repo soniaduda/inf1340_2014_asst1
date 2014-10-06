@@ -28,7 +28,7 @@ def decide_rps(player1, player2):
     :param:
         string: "Rock", "Paper", "Scissors"
     :return:
-        int, value of player that wins
+        int, 0 for a tie, 1 for player1 win, 2 for player2 win
     :raises:
         TypeError if parameter is not correct string input
     """
