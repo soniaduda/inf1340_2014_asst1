@@ -27,9 +27,16 @@ def test_input():
 
     with pytest.raises(TypeError):
         decide_rps(1, 2)  # integer
+        decide_rps(1, "Rock") # player1 integer
+        decide_rps("Rock", 1) # player2 integer
+
         decide_rps(1.2, 2.3)  # float
+        decide_rps(1.2, "Paper") # player1 float
+        decide_rps("Paper", 2.3) # player2 float
 
     with pytest.raises(ValueError):
-        decide_rps("papah", "Rock")  # misspelled
+        decide_rps("papah", "Rock")  # misspelled player1
+        decide_rps("Rock", "papah")  # misspelled player2
+
         decide_rps("P", "R")  # not full word
         decide_rps("player1", "player2")  # incorrect input
