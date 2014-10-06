@@ -46,7 +46,7 @@ def decide_rps(player1, player2):
         raise TypeError("Invalid input")  # raise TypeError if player1 is not string
 
     if type(player2) is not str: # check type of input
-        raise TypeError("Invalid input") # raise TypeError if player2 is not string
+        raise TypeError("Invalid input")  # raise TypeError if player2 is not string
 
     if player1 != "Rock" and player1 != "Paper" and player1 != "Scissors":
         raise ValueError("Invalid input")

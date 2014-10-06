@@ -12,7 +12,6 @@ __status__ = "Prototype"
 import pytest
 from exercise3 import decide_rps
 
-
 def test_decide_rps():
     """
     Inputs that are the correct format and length
@@ -25,7 +24,12 @@ def test_input():
     """
     Inputs that are the incorrect format and length
     """
+
+    with pytest.raises(TypeError):
+        decide_rps(1, 2)  # integer
+        decide_rps(1.2, 2.3)  # float
+
     with pytest.raises(ValueError):
         decide_rps("papah", "Rock")  # misspelled
-        decide_rps("P")  # not full word
-        decide_rps("player1")  # incorrect input
+        decide_rps("P", "R")  # not full word
+        decide_rps("player1", "player2")  # incorrect input
