@@ -12,6 +12,7 @@ __status__ = "Prototype"
 import pytest
 from exercise3 import decide_rps
 
+
 def test_decide_rps():
     """
     Inputs that are the correct format and length
@@ -19,6 +20,7 @@ def test_decide_rps():
     assert decide_rps("Rock", "Paper") == 2
     assert decide_rps("Scissors", "Scissors") == 0
     assert decide_rps("Rock", "Scissors") == 1
+
 
 def test_input():
     """
