@@ -22,6 +22,7 @@ __status__ = "Prototype"
 
 # imports one per line
 
+
 def grade_to_gpa(grade):
     """
     Returns the UofT Graduate GPA for a given grade.
@@ -45,26 +46,26 @@ def grade_to_gpa(grade):
         else:
             raise ValueError("Invalid input")
     elif type(grade) is int:
-        if grade >= 0 and grade <= 100:  # check that grade is in the accepted range, then assigns the number grade to the corresponding letter grade
-             if grade >=90 and grade <=100:
+        if grade >= 0 and grade <= 100:  # check that grade is in the accepted range
+            # assigns the number grade to the corresponding letter grade
+            if grade >= 90:
                 letter_grade = "A+"
-             elif grade >=85 and grade <=89:
+            elif grade >= 85:
                 letter_grade = "A"
-             elif grade >=80 and grade <=84:
-                letter_grade= "A-"
-             elif grade >=77 and grade <=79:
-                letter_grade= "B+"
-             elif grade >=73 and grade <=76:
+            elif grade >= 80:
+                letter_grade = "A-"
+            elif grade >= 77:
+                letter_grade = "B+"
+            elif grade >= 73:
                 letter_grade = "B"
-             elif grade >=70 and grade <=72:
+            elif grade >= 70:
                 letter_grade = "B-"
-             else:
-                 letter_grade = "FZ"
+            else:
+                letter_grade = "FZ"
         else:
             raise ValueError("Invalid input")
     else:
         raise TypeError("Invalid type passed as parameter")  # raise a TypeError exception
-
 
     # write a long if-statement to convert letter_grade
     # assign the value to gpa
@@ -72,7 +73,7 @@ def grade_to_gpa(grade):
         gpa = 4.0
     elif letter_grade == "A-":
         gpa = 3.7
-    elif letter_grade =="B+":
+    elif letter_grade == "B+":
         gpa = 3.3
     elif letter_grade == "B":
         gpa = 3.0
